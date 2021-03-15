@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,10 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     HomeComponent,
     ProductsComponent,
     NavigationComponent,
-    ProductListComponent
+    ProductListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
