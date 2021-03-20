@@ -7,6 +7,7 @@
       <th>Price</th>
       <th>Featured</th>
       <th>Active</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,15 @@
       <td>{{ product.price }}</td>
       <td>{{ product.featured }}</td>
       <td>{{ product.active }}</td>
+      <td>
+        <button
+          (click)="onDelete(product)"
+          type="button"
+          class="btn btn-danger"
+        >
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

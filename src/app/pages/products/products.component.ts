@@ -16,4 +16,10 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getAll();
   }
+
+  deleteItem(product: Product): void {
+    this.productService.remove(product).subscribe(() => {
+      this.productService.getAll();
+    });
+  }
 }
